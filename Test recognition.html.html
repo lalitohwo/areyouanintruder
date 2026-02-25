@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Recognizing test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="card" id="card">
+      <h1>Hey, do we know each other?</h1>
+      <div class="actions">
+
+        <a class="btn primary" href="yes.html">Yes</a>
+
+        <a class="btn" href="no.html">No</a>
+
+        <a class="btn" href="maybe.html">Maybe</a>
+    </div>
+    </div>
+    
+ <img src="https://media.tenor.com/0qOe1rspNTUAAAAi/yes-yes-yes.gif" class="meme hidden" id="Yesmeme">
+  <img src="https://media.tenor.com/p8JyKswtujkAAAAi/smh-facepalm.gif" class="meme hidden" id="Nomeme">
+  <img src="https://media.tenor.com/Sc4l2qxKM9YAAAAi/huh-confused.gif" class="meme hidden" id="Maybememe">
+    
+  </main>
+  <script>
+  const card = document.getElementById("card");
+
+  document.addEventListener("mousemove", (e) => {
+    const x = (window.innerWidth / 2 - e.clientX) / 25;
+    const y = (window.innerHeight / 2 - e.clientY) / 25;
+
+    card.style.transform = `translate(${x}px, ${y}px)`;
+  });
+</script>
+
+<script>
+  const yesBtn = document.querySelector('a[href="yes.html"]');
+  const noBtn = document.querySelector('a[href="no.html"]');
+  const maybeBtn = document.querySelector('a[href="maybe.html"]');
+
+  const yesMeme = document.getElementById("Yesmeme");
+  const noMeme = document.getElementById("Nomeme");
+  const maybeMeme = document.getElementById("Maybememe");
+
+function show(meme) {
+  meme.classList.remove("hidden");
+}
+
+function hide(meme) {
+  meme.classList.add("hidden");
+}
+
+  yesBtn.addEventListener("mouseenter", () => show(yesMeme));
+  yesBtn.addEventListener("mouseleave", () => hide(yesMeme));
+
+  noBtn.addEventListener("mouseenter", () => show(noMeme));
+  noBtn.addEventListener("mouseleave", () => hide(noMeme));
+
+  maybeBtn.addEventListener("mouseenter", () => show(maybeMeme));
+  maybeBtn.addEventListener("mouseleave", () => hide(maybeMeme));
+</script>
+
+</body>
+</html>

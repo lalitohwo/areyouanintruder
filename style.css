@@ -1,0 +1,87 @@
+.container {
+padding: 26px 42px;
+border-bottom: var(--h1-border-width) solid var(--h1-border);
+border-top: var(--h1-border-width) solid var(--h1-border);
+background-color: var(--bg);
+border-radius: 14px;
+font-family: 'courier new', monospace;
+text-align: center;
+letter-spacing: 2px;
+}
+
+:root {
+  --bg: #ECB315;
+  --h1-bg: #BB4430;
+  --h1-border: #ECB315;
+  --h1-text: #231F20;
+  --accent: #EFE6DD;
+}
+
+.actions {
+    padding:26px;
+    font-size: large;
+    justify-content: center;
+    display: flex;
+  gap: 15px;
+  margin-top: 20px;  
+}
+
+body {
+background-color: #F3DFA2;
+margin: 0;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 9px;
+  background-color: #BB4430;
+  color: #231F20;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+
+.btn:hover {
+  opacity: 0.5;
+  background-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px #231F20(0, 0, 0, 0.3);
+}
+
+h1 {
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 12px;
+  background: var(--h1-bg);
+  color: var(--h1-text);
+  border: 2px solid var(--h1-border);
+  box-shadow: 0 8px 20px #231F20(0, 0, 0, 0.12);
+  letter-spacing: 0.5px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.meme {
+    width: 200px;
+    margin-top: 20px;
+    transition: opacity 0.3s ease;
+}
+
+#Maybememe {
+    width: 350px;
+}
